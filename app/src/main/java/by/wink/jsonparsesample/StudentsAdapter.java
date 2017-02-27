@@ -35,6 +35,7 @@ public class StudentsAdapter extends RecyclerView.Adapter<StudentsAdapter.Studen
         Student currentStudent = dataSet.get(position);
         holder.studentNameTv.setText(currentStudent.getName());
         holder.studentEmail.setText(currentStudent.getEmail());
+        new ImageDownloaderTask(holder.studentImage).execute(currentStudent.getImageUrl());
 
 
     }
@@ -55,12 +56,14 @@ public class StudentsAdapter extends RecyclerView.Adapter<StudentsAdapter.Studen
         public TextView studentNameTv;
         public TextView studentEmail;
         public ImageButton studenGithub;
+        public ImageView studentImage;
 
         public StudentViewHolder(final View v) {
             super(v);
             studentNameTv = (TextView) v.findViewById(R.id.student_name);
             studentEmail = (TextView) v.findViewById(R.id.student_email);
             studenGithub = (ImageButton) v.findViewById(R.id.student_github);
+            studentImage = (ImageView)v.findViewById(R.id.student_image);
 
             studenGithub.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -75,5 +78,7 @@ public class StudentsAdapter extends RecyclerView.Adapter<StudentsAdapter.Studen
                 }
             });
         }
+
+
     }
 }
