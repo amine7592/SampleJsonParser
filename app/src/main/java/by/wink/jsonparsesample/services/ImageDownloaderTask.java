@@ -1,4 +1,4 @@
-package by.wink.jsonparsesample;
+package by.wink.jsonparsesample.services;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
@@ -7,6 +7,8 @@ import android.support.v4.content.ContextCompat;
 import android.widget.ImageView;
 
 import java.lang.ref.WeakReference;
+
+import by.wink.jsonparsesample.R;
 
 /**
  * Created by amine on 27/02/17.

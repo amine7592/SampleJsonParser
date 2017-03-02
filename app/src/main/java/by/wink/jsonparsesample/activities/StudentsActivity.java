@@ -1,4 +1,4 @@
-package by.wink.jsonparsesample;
+package by.wink.jsonparsesample.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,11 +15,14 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
 import java.io.Writer;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+import by.wink.jsonparsesample.R;
+import by.wink.jsonparsesample.models.Student;
+import by.wink.jsonparsesample.adapters.StudentsAdapter;
+
+public class StudentsActivity extends AppCompatActivity {
     RecyclerView studentsRv;
     LinearLayoutManager layoutManager;
     StudentsAdapter adapter;
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_students);
         studentsRv = (RecyclerView) findViewById(R.id.students_rv);
         layoutManager = new LinearLayoutManager(this);
         adapter = new  StudentsAdapter();

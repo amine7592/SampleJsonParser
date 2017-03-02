@@ -1,6 +1,5 @@
-package by.wink.jsonparsesample;
+package by.wink.jsonparsesample.adapters;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
@@ -10,9 +9,12 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import by.wink.jsonparsesample.services.ImageDownloaderTask;
+import by.wink.jsonparsesample.R;
+import by.wink.jsonparsesample.models.Student;
 
 /**
  * Created by amine on 27/02/17.

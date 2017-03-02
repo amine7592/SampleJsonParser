@@ -1,4 +1,4 @@
-package by.wink.jsonparsesample;
+package by.wink.jsonparsesample.services;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
