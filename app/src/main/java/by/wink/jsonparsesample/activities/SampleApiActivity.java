@@ -61,7 +61,7 @@ public class SampleApiActivity extends AppCompatActivity {
 
     public void doSearch() {
         String query = searchEt.getText().toString();
-        new FoursquareApiTask().execute();
+        new FoursquareApiTask().execute(query);
 
 
     }
